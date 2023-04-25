@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/rdeEnablement/clientlibs"/>
+    <filter root="/apps/rdeEnablement/components"/>
+    <filter root="/apps/rdeEnablement/i18n"/>
+</workspaceFilter>
