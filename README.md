@@ -150,11 +150,39 @@ The easiest way to get the org is to get it from the developer console, create a
 In order to perform a dispatcher deployment execute the following command:
 
 ```
+cd dispatcher
+mvn clean package
 aio aem:rde:install target/rdeEnablement.dispatcher.cloud-1.0.0-SNAPSHOT.zip
+```
+
+Output should be something like:
+
+```
+#5: deploy completed for dispatcher-config rdeEnablement.dispatcher.cloud-1.0.0-SNAPSHOT.zip on dispatcher - done by C777315E64480E310A495EC1@techacct.adobe.com at 2023-04-25T19:05:08.197Z
+Logs:
+> Cloud manager validator 2.0.53
+> 2023/04/25 19:05:24 No issues found
+> Syntax OK
 ```
 
 ## Perform Code Deployment
 
 ```
+mvn clean install
+cd ui.apps/target
 aio aem:rde:install rdeEnablement.ui.apps-1.0.0-SNAPSHOT.zip
 ```
+
+Output should be something like:
+
+```
+Uploading ████████████████████████████████████████ 100% | ETA: 0s | 53/53 KB
+#4: deploy completed for content-package rdeEnablement.ui.apps-1.0.0-SNAPSHOT.zip on author,publish - done by C777315E64480E310A495EC1@techacct.adobe.com at 2023-04-25T19:00:57.306Z
+```
+
+Once this is complete you can see the content by going to the RDE and navigating to /apps/rdeEnablement.-1.json, there you will see the JSON representation of the nodes in the repository.
+
+## Documentation
+
+To read more please go to 
+https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html?lang=en#introduction
